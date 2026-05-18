@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="icon" href="https://fav.farm/💻" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styl.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
 </head>
+
 <body class="bg-slate-50 text-slate-900 min-h-screen pb-20">
 
     <header class="w-full bg-white border-b border-slate-200 py-10 mb-12 shadow-sm">
@@ -17,13 +20,16 @@
             <div class="text-center md:text-left">
                 <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
                     <span class="bg-sky-600 text-white text-[10px] font-black px-2 py-1 rounded">EXAMEN</span>
-                    <span class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Módulo JavaScript</span>
+                    <span class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Módulo
+                        JavaScript</span>
                 </div>
-                <h1 class="text-4xl font-extrabold tracking-tight text-slate-900">Control de <span class="text-sky-600">Actividades</span></h1>
+                <h1 class="text-4xl font-extrabold tracking-tight text-slate-900">Control de <span
+                        class="text-sky-600">Actividades</span></h1>
             </div>
-            
+
             <div class="flex items-center gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-100">
-                <div class="w-10 h-10 bg-sky-600 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                <div class="w-10 h-10 bg-sky-600 rounded-full flex items-center justify-center text-white font-bold">A
+                </div>
                 <div class="text-left">
                     <p class="text-xs font-bold text-slate-800">AYA</p>
                     <p class="text-[10px] text-slate-500">Desarrollador Web</p>
@@ -35,7 +41,7 @@
     <main class="max-w-6xl mx-auto px-6">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             <section class="glass-card border border-slate-200 rounded-[2.5rem] p-8">
                 <h2 class="font-black text-xs uppercase tracking-[0.2em] text-sky-900 mb-6">Bloque I: Aritmética</h2>
                 <div class="space-y-1">
@@ -74,7 +80,8 @@
                     <a href="Ejercicio5.5/index.html" class="item-link bg-sky-500">5.5 Cajero Automático</a>
                     <a href="Tamagotchi/index.html" class="item-link bg-sky-500 italic">Tamagotchi Patoso</a>
                     <a href="Frio_Caliente/index.html" class="item-link bg-sky-500 italic">Frio y Caliente</a>
-                    <a href="conversion-variables/index.html" class="item-link bg-sky-500 italic">Conversion de Variables</a>
+                    <a href="conversion-variables/index.html" class="item-link bg-sky-500 italic">Conversion de
+                        Variables</a>
                 </div>
             </section>
 
@@ -92,60 +99,55 @@
                 </div>
             </section>
         </div>
-        <section class="flex justify-center mt-10">
+        <section class="flex justify-center mt-10 px-4">
 
-<div class="bg-black text-white w-[1150px] p-8 relative">
+    <div class="bg-black text-white w-full max-w-[1150px] p-4 md:p-8 relative rounded-2xl">
 
-    <!-- Titre -->
-    <h1 class="text-5xl font-bold text-center mb-6">
-        Comidas del Mundo
-    </h1>
+        <!-- Titre -->
+        <h1 class="text-3xl md:text-5xl font-bold text-center mb-6">
+            Comidas del Mundo
+        </h1>
 
-    <!-- Bouton gauche -->
-    <button
-    onclick="cambiarSlide(-1)"
-    class="absolute left-10 top-1/2 text-6xl font-bold">
-    «
-    </button>
+        <!-- Bouton gauche -->
+        <button 
+            onclick="cambiarSlide(-1)" 
+            class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-4xl md:text-6xl font-bold z-10"
+        >
+            «
+        </button>
 
-    <!-- Bouton droite -->
-    <button
-    onclick="cambiarSlide(1)"
-    class="absolute right-10 top-1/2 text-6xl font-bold">
-    »
-    </button>
+        <!-- Bouton droite -->
+        <button 
+            onclick="cambiarSlide(1)" 
+            class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-4xl md:text-6xl font-bold z-10"
+        >
+            »
+        </button>
 
-    <!-- Image -->
-    <div class="flex justify-center">
+        <!-- Image -->
+        <div class="flex justify-center">
+            <img 
+                id="foto-comida" 
+                src="" 
+                class="w-full max-w-[900px] h-[250px] sm:h-[350px] md:h-[450px] object-cover rounded-xl"
+            >
+        </div>
 
-        <img
-        id="foto-comida"
-        src=""
-        class="w-[900px] h-[450px] object-cover">
+        <!-- Infos -->
+        <div class="w-full max-w-[900px] mx-auto mt-6">
 
-    </div>
+            <h2 id="nombre-plato" class="text-2xl md:text-4xl font-bold">
+            </h2>
 
-    <!-- Infos -->
-    <div class="w-[900px] mx-auto mt-6">
+            <p id="desc-plato" class="text-lg md:text-2xl text-gray-300 mt-2">
+            </p>
 
-        <h2
-        id="nombre-plato"
-        class="text-4xl font-bold">
-        </h2>
+            <ul id="lista-caract" class="text-lg md:text-2xl mt-4 space-y-2">
+            </ul>
 
-        <p
-        id="desc-plato"
-        class="text-2xl text-gray-300">
-        </p>
-
-        <ul
-        id="lista-caract"
-        class="text-2xl mt-4 space-y-2">
-        </ul>
+        </div>
 
     </div>
-
-</div>
 
 </section>
 
@@ -156,4 +158,5 @@
     </footer>
 
 </body>
+
 </html>
