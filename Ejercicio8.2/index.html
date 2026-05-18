@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Verificador DNI</title>
+
+<style>
+body{
+background:
+linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+min-height:100vh;
+}
+
+.fondo{
+position:absolute;
+width:300px;
+height:300px;
+border-radius:50%;
+filter:blur(90px);
+opacity:.4;
+}
+
+.uno{
+background:#8b5cf6;
+top:-80px;
+left:-100px;
+}
+
+.dos{
+background:#06b6d4;
+bottom:-80px;
+right:-100px;
+}
+</style>
+
+</head>
+
+<body class="flex items-center justify-center p-5 relative overflow-hidden">
+
+    <a href="../index.html" style="position:fixed; bottom:20px; right:20px; background:#8b5cf6; color:white; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; border-radius:50%; font-size:24px; z-index:9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white;">🏠</a>
+
+
+    <div class="fondo uno"></div>
+    <div class="fondo dos"></div>
+
+    <div class="w-full max-w-lg">
+
+    <div class="backdrop-blur-xl bg-white/10 border border-white/20 rounded-[35px]
+    shadow-2xl p-8">
+
+        <div class="text-center mb-8">
+
+            <div class="w-20 h-20 mx-auto rounded-full
+            bg-gradient-to-r from-cyan-400 to-violet-500
+            flex items-center justify-center text-4xl mb-4">
+
+                🪪
+
+            </div>
+
+            <h1 class="text-white text-3xl font-bold">
+            Verificador DNI o NIE
+            </h1>
+
+            <p class="text-gray-300 mt-2">
+            Introduce tu DNI o NIE con letra
+            </p>
+
+        </div>
+
+        <div>
+
+            <label class="text-white font-semibold">
+                DNI o NIE
+            </label>
+
+            <input
+                id="dni"
+                type="text"
+                placeholder="Ej: 12345678Z"
+                class="mt-2 w-full p-4 rounded-2xl
+                bg-white/20 border border-white/30
+                text-white placeholder-gray-300
+                outline-none focus:ring-4
+                focus:ring-cyan-500"
+            />
+
+            <button
+            onclick="comprobarDNI()"
+            class="mt-6 w-full p-4 rounded-2xl
+            bg-gradient-to-r from-cyan-500 to-violet-600
+            text-white font-bold text-lg
+            hover:scale-105 duration-300 shadow-xl">
+
+            Comprobar DNI o NIE
+
+            </button>
+
+        </div>
+
+        <div id="resultado"
+            class="hidden mt-6 p-5 rounded-2xl text-center font-bold">
+        </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

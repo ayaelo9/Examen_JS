@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8.1 - Analizador de Primos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 min-h-screen text-slate-100 flex items-center justify-center p-4 font-sans">
+    
+    <a href="../index.html" style="position:fixed; bottom:20px; right:20px; background:#5e007d; color:white; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; border-radius:50%; font-size:24px; z-index:9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white;">🏠</a>
+
+    <div class="w-full max-w-xl bg-slate-900/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 md:p-8 shadow-2xl shadow-indigo-950/50">
+        
+        <div class="mb-6 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-800/40">Algoritmia Avanzada</span>
+            <h1 class="text-3xl font-black mt-2 bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">Buscador de Primos</h1>
+            <p class="text-sm text-slate-400 mt-1">Encuentra el primer número primo dentro de una colección usando <code class="text-indigo-300">do-while</code></p>
+        </div>
+
+        <div class="space-y-4">
+            <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Ingresa números separados por comas</label>
+                <div class="flex gap-2">
+                    <input type="text" id="arrayInput" value="4, 6, 8, 9, 11, 15, 17" 
+                           class="w-full bg-slate-950/50 border border-slate-700/60 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 transition-colors shadow-inner" placeholder="Ej. 4, 8, 15, 16, 23, 42">
+                    <button onclick="generarAleatorios()" class="bg-slate-800 hover:bg-slate-750 border border-slate-700 text-sm px-3 rounded-xl transition-all active:scale-95 whitespace-nowrap">🎲 Al azar</button>
+                </div>
+            </div>
+
+            <button onclick="procesarArray()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-indigo-900/40 transition-all active:scale-[0.99] mt-2 tracking-wide">
+                Iniciar Búsqueda
+            </button>
+        </div>
+
+        <div id="resultadoBox" class="mt-6 hidden transition-all duration-300">
+            <div class="bg-slate-950/40 border border-slate-800 rounded-2xl p-4">
+                <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Resultados del análisis</div>
+                <div id="arrayVisual" class="flex flex-wrap gap-1.5 mb-3"></div>
+                <div id="textoResultado" class="text-sm font-medium"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
