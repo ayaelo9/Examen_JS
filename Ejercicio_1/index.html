@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Formulario Aritmético</title>
+</head>
+<body>
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-slate-200 mt-10">
+        <h2 class="text-2xl font-black text-violet-700 mb-6 uppercase tracking-tight">
+            Formulario Aritmético
+        </h2>
+
+        <div class="space-y-6">
+            <div class="flex flex-col gap-2">
+                <label class="font-bold text-slate-600" for="numeroa">Escribe un número entero:</label>
+                <input 
+                    class="border-2 border-slate-200 rounded-lg px-4 py-2 focus:border-violet-500 outline-none text-lg font-semibold text-violet-700 transition-all" 
+                    id="numeroa" 
+                    type="number" 
+                    placeholder="Ej: 10"
+                >
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="font-bold text-slate-600" for="numerob">Escribe otro número entero:</label>
+                <input 
+                    class="border-2 border-slate-200 rounded-lg px-4 py-2 focus:border-violet-500 outline-none text-lg font-semibold text-violet-700 transition-all" 
+                    id="numerob" 
+                    type="number" 
+                    placeholder="Ej: 5"
+                >
+            </div>
+
+            <button 
+                onclick="calcular()" 
+                class="w-full bg-violet-600 text-white font-black py-3 rounded-lg hover:bg-violet-700 transition-colors shadow-md active:scale-95"
+            >
+                Aritmética
+            </button>
+
+            <div class="bg-slate-50 p-6 rounded-lg border-2 border-dashed border-slate-200 mt-6 space-y-3">
+                <p id="suma" class="text-slate-700 font-medium"></p>
+                <p id="resta" class="text-slate-700 font-medium"></p>
+                <p id="multiplicacion" class="text-slate-700 font-medium"></p>
+                <p id="division" class="text-slate-700 font-medium"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

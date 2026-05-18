@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="Restaurante.png" type="image/x-icon">
+    <title>Restaurante La Petite Cuisine</title>
+</head>
+<body class="bg-[#1a1a1a] min-h-screen flex items-center justify-center p-6 font-serif">
+
+    <div class="max-w-2xl w-full bg-[#f4f1ea] rounded-sm shadow-[0_0_80px_rgba(0,0,0,0.5)] border-[16px] border-[#2a2a2a] overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-[#d4af37] opacity-10 rotate-45 translate-x-12 -translate-y-12"></div>
+
+        <div class="p-10 text-center border-b border-stone-300">
+            <h1 class="text-[#2a2a2a] text-4xl font-bold tracking-tighter uppercase mb-2">La Petite Cuisine</h1>
+            <div class="flex items-center justify-center gap-4 text-[#d4af37]">
+                <span class="h-[1px] w-10 bg-[#d4af37]"></span>
+                <span class="text-xs tracking-[0.3em] uppercase">Menú de Degustación</span>
+                <span class="h-[1px] w-10 bg-[#d4af37]"></span>
+            </div>
+        </div>
+
+        <div class="p-10">
+            <div class="mb-10">
+                <label class="block text-[#2a2a2a] text-sm font-bold mb-4 text-center italic">Seleccione su plato principal:</label>
+                <select id="plato" class="w-full bg-transparent border-b-2 border-stone-400 p-3 text-lg focus:border-[#d4af37] outline-none transition-colors cursor-pointer text-stone-800">
+                    <optgroup label="Carnes y Aves">
+                        <option value="entrecot">Entrecot a la Brasa</option>
+                        <option value="pollo">Pollo Trufado</option>
+                        <option value="hamburguesa">Hamburguesa Gourmet (con queso)</option>
+                    </optgroup>
+                    <optgroup label="Pastas y Arroces">
+                        <option value="espagueti">Espaguetis Carbonara (gluten/lácteos)</option>
+                        <option value="lasana">Lasaña de Ternera (gluten)</option>
+                        <option value="risotto">Risotto de Setas (lácteos)</option>
+                    </optgroup>
+                    <optgroup label="Opciones de la Huerta">
+                        <option value="ensalada">Ensalada César (lácteos/gluten)</option>
+                        <option value="crema">Crema de Calabaza (Vegano)</option>
+                        <option value="wok">Wok de Verduras (Vegano)</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                <label class="flex items-center gap-3 group cursor-pointer">
+                    <input type="checkbox" id="vegano" class="hidden peer">
+                    <div class="w-5 h-5 border border-stone-400 rounded-full peer-checked:bg-[#d4af37] peer-checked:border-[#d4af37] transition-all"></div>
+                    <span class="text-sm text-stone-700 font-medium group-hover:text-[#d4af37]">Vegano</span>
+                </label>
+                <label class="flex items-center gap-3 group cursor-pointer">
+                    <input type="checkbox" id="lactosa" class="hidden peer">
+                    <div class="w-5 h-5 border border-stone-400 rounded-full peer-checked:bg-[#d4af37] peer-checked:border-[#d4af37] transition-all"></div>
+                    <span class="text-sm text-stone-700 font-medium group-hover:text-[#d4af37]">Sin Lactosa</span>
+                </label>
+                <label class="flex items-center gap-3 group cursor-pointer">
+                    <input type="checkbox" id="gluten" class="hidden peer">
+                    <div class="w-5 h-5 border border-stone-400 rounded-full peer-checked:bg-[#d4af37] peer-checked:border-[#d4af37] transition-all"></div>
+                    <span class="text-sm text-stone-700 font-medium group-hover:text-[#d4af37]">Sin Gluten</span>
+                </label>
+            </div>
+
+            <button onclick="confirmarPedido()" class="w-full bg-[#2a2a2a] text-[#d4af37] py-4 font-bold tracking-[0.2em] uppercase hover:bg-[#3a3a3a] transition-all shadow-lg active:scale-95">
+                Confirmar Comanda
+            </button>
+
+            <div id="resultado" class="mt-8 text-center p-6 rounded-sm border border-stone-300 hidden animate-fade-in">
+                <p id="mensaje" class="text-lg italic"></p>
+            </div>
+        </div>
+
+        <div class="bg-[#2a2a2a] p-4 text-center">
+            <p class="text-[#d4af37]/50 text-[10px] tracking-widest uppercase">Buen provecho · Bon Appétit</p>
+        </div>
+    </div>
+
+</body>
+</html>
+    <script src="js/script.js"></script>
+</body>
+</html>

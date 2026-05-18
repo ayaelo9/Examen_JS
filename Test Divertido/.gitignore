@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+"css.lint.unknownAtRules": "ignore"
+=======
+"css.lint.unknownAtRules": "ignore"
+>>>>>>> 4a7e273 (Solucionado el cambio de titulos y etiquetas)
+node_modules/

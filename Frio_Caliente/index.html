@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<title>Adivina el número</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body"
+class="min-h-screen flex justify-center items-center bg-gray-200 transition-all duration-500">
+
+<div class="bg-white p-10 rounded-3xl shadow-2xl w-[500px] text-center">
+
+<h1 class="text-4xl font-bold mb-4">
+🎯 Adivina el número
+</h1>
+
+<p class="text-gray-500 mb-6">
+Introduce un número entre 1 y 500
+</p>
+
+<input
+id="numero"
+type="number"
+min="1"
+max="500"
+class="w-full border p-3 rounded-xl text-center text-2xl mb-5"
+placeholder="Escribe un número">
+
+<button
+id="btn"
+onclick="adivinar()"
+class="bg-black text-white px-8 py-3 rounded-full hover:scale-105 transition">
+Adivinar
+</button>
+
+<p
+id="mensaje"
+class="mt-6 text-2xl font-bold">
+</p>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

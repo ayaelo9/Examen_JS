@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Calculadora de Gastos de Casa</title>
+</head>
+<body class="bg-slate-100 p-4 md:p-10 font-sans">
+
+  
+    
+    <details>
+      <summary class="p-3 font-bold  bg-[#005a8f] text-white cursor-pointer outline-none">ENUNCIADO</summary>
+              <p>Responde los datos del formulario y termina la función <code>Calcular()</code> de manera que al hacer clic en el botón, aparezca el siguiente texto en el párrafo con id <code>totalGastos</code>:</p>
+      <p class="font-mono text-center">
+        "<mark>Nombre Apellidos</mark>: Tu gasto fijo total es de <mark>total</mark> euros."
+      </p>
+      <p>Ejemplo:</p>
+      <p class="font-mono text-center">
+        <strong>Pepito Pérez Rojas</strong>: Tu gasto fijo total es de <strong>450</strong> euros."
+      </p>
+    
+      
+    </details>
+
+    <details class="border-2 border-[#005a8f] bg-white rounded shadow">
+      <summary class="p-3 font-bold text-[#005a8f] cursor-pointer outline-none">Tipos de Datos en JavaScript</summary>
+      <div class="flex flex-row">
+      <div class="flex-1 border-1">
+        <p class="px-4 py-2">
+          <strong>Primitivos:</strong> Se accede directamente al valor. Para saber el tipo de datos de una variable se usa <a class="text-blue-600" href="https://www.aprendejavascript.dev/clase/introduccion/operador-typeof" target="_blank" rel="noopener noreferrer"><code>typeof</code></a>
+        </p>
+        <ul class="[list-style-type:circle] list-outside ml-8 mb-3">
+        <li><strong>string</strong>: Cadena de Texto. Se convierte a número con la función <code>Number</code>.</li>
+        <li><strong>number</strong>: Valor numérico</li>
+        <li><strong>bigint</strong>: Números enteros mayores a 9007199254740991<br>(2<sup>53</sup> - 1). Se representan añadiendo una <strong>n</strong> al final del número.</li>
+        <li><strong>boolean</strong>: Valor lógico Verdadero/Falso. (ver <a class="text-blue-600" href="https://lenguajejs.com/javascript/tipos/falsy-truthy/" target="_blank" rel="noopener noreferrer">Falsy y Truthy</a>)</li>
+        <li><strong>null</strong>: La variable tiene como valor, <strong>vacío</strong>.</li>
+        <li><strong>undefined</strong>: La variable ha sido declarada pero no tiene valor.</li>
+        <li><strong>NaN</strong>: Not a Number (no es un número)</li>
+        </ul>
+      </div>
+      <div class="flex-1 border-1">
+        <p class="px-4 py-2">
+          <strong>Compuestos:</strong> Se accede a la referencia del valor. La variable no guarda los datos, guarda la "ubicación" en la memoria donde están esos datos. Si dos variables apuntan a la misma dirección y una cambia algo, la otra también lo verá cambiado. Para saber el tipo de objeto que se está trabajando se utiliza <a class="text-blue-600" href="https://es.javascript.info/instanceof" target="_blank" rel="noopener noreferrer"><code>instanceof</code></a>.
+        </p>
+        <ul class="[list-style-type:circle] list-outside ml-8 mb-3">
+          <li><strong>object</strong>: {...} Es una colección de clave: valor.</li>
+          <li><strong>array</strong>: [...] Guardan listas de valores los cuales referenciamos por un índice numérico.</li>
+          <li><strong>function()</strong>: {...} Guardan un bloque de código para ejecutarlo al ser invocado.</li>
+          <li><strong>Class</strong>: {...} Plantillas que permiten crear muchos objetos con la misma estructura y comportamiento</li>
+        </ul>
+      </div>
+    </div>
+    </details>
+
+    <div class="bg-[#f1f3f6] p-8 rounded-3xl shadow-lg border border-slate-200">
+      <h1 class="text-[#005a8f] font-black text-2xl mb-2 uppercase italic">GASTOS DE LA CASA</h1>
+      
+      <div class="space-y-4 mb-6">
+        <div class="flex items-center">
+          <label class="w-1/3 text-right pr-6 font-semibold text-slate-600" for="nombre">Tu nombre:</label>
+          <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-2 text-[#0086c8] focus:border-[#0086c8] outline-none placeholder:text-slate-300" type="text" id="nombre" placeholder="Escribe tu nombre">
+        </div>
+        <div class="flex items-center">
+          <label class="w-1/3 text-right pr-6 font-semibold text-slate-600" for="apellidos">Apellido(s):</label>
+          <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-2 text-[#0086c8] focus:border-[#0086c8] outline-none placeholder:text-slate-300" type="text" id="apellidos" placeholder="Tus apellidos">
+        </div>
+      </div>
+
+      <fieldset class="border-2 border-[#005a8f] p-6 pt-8 my-8 rounded-3xl bg-white relative">
+        <legend class="bg-[#005a8f] text-white px-4 py-1 rounded-full text-xs font-bold uppercase absolute -top-3.5 left-6">
+          GASTOS FIJOS
+        </legend>
+        
+        <div class="space-y-3">
+          <div class="flex items-center">
+            <label class="w-1/3 text-right pr-6 text-sm" for="internet">Internet:</label>
+            <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-1.5 text-[#0086c8] font-mono" type="number" id="internet" value="25">
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/3 text-right pr-6 text-sm" for="luz">Luz:</label>
+            <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-1.5 text-[#0086c8] font-mono" type="number" id="luz" value="0">
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/3 text-right pr-6 text-sm" for="agua">Agua:</label>
+            <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-1.5 text-[#0086c8] font-mono" type="number" id="agua" value="0">
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/3 text-right pr-6 text-sm" for="gas">Gas:</label>
+            <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-1.5 text-[#0086c8] font-mono" type="number" id="gas" value="0">
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/3 text-right pr-6 text-sm" for="alquiler">Alquiler:</label>
+            <input class="w-2/3 border border-slate-300 rounded-lg px-4 py-1.5 text-[#0086c8] font-mono" type="number" id="alquiler" value="0">
+          </div>
+        </div>
+      </fieldset>
+
+      <button 
+        type="button" 
+        onclick="Calcular()" 
+        class="bg-white border-2 border-[#005a8f] text-[#005a8f] px-10 py-2 rounded-xl font-bold hover:bg-[#005a8f] hover:text-white transition-colors duration-200 shadow-sm"
+      >
+        Calcular Gastos
+      </button>
+
+      <div id="totalGastos" class="mt-8 border-2 border-[#005a8f] p-5 bg-white rounded-2xl min-h-[60px] flex items-center italic text-slate-700 font-serif shadow-inner">
+        El resultado aparecerá aquí...
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

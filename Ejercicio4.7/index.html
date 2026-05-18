@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="Restaurante.png" type="image/x-icon">
+    <title>Verificador de Raciones</title>
+</head>
+<body class="bg-[#1a1a1a] min-h-screen flex items-center justify-center p-6 font-serif">
+
+    <div class="max-w-md w-full bg-[#f4f1ea] rounded-sm shadow-[0_0_80px_rgba(0,0,0,0.5)] border-[16px] border-[#2a2a2a] overflow-hidden relative">
+        
+        <div class="absolute top-0 right-0 w-20 h-20 bg-[#d4af37] opacity-10 rotate-45 translate-x-10 -translate-y-10"></div>
+
+        <div class="p-10 text-center border-b border-stone-300">
+            <h1 class="text-[#2a2a2a] text-3xl font-bold tracking-tighter uppercase mb-1">La Pequeña Cocina</h1>
+            <div class="flex items-center justify-center gap-3 text-[#d4af37]">
+                <span class="h-[1px] w-8 bg-[#d4af37]"></span>
+                <span class="text-[10px] tracking-[0.3em] uppercase">Control de Múltiplos</span>
+                <span class="h-[1px] w-8 bg-[#d4af37]"></span>
+            </div>
+        </div>
+
+        <div class="p-10 space-y-8">
+            <div class="space-y-6">
+                <div class="border-b-2 border-stone-300 focus-within:border-[#d4af37] transition-colors">
+                    <label class="block text-[10px] text-stone-400 uppercase font-bold mb-1">Número Dividendo</label>
+                    <input type="number" id="dividendo" placeholder="Ej: 15" 
+                        class="w-full bg-transparent p-2 text-2xl text-stone-800 outline-none font-mono">
+                </div>
+                <div class="border-b-2 border-stone-300 focus-within:border-[#d4af37] transition-colors">
+                    <label class="block text-[10px] text-stone-400 uppercase font-bold mb-1">Número Divisor (2 al 7)</label>
+                    <input type="number" id="divisor" placeholder="Ej: 3" 
+                        class="w-full bg-transparent p-2 text-2xl text-stone-800 outline-none font-mono">
+                </div>
+            </div>
+
+            <button onclick="verificarMultiplo()" 
+                class="w-full bg-[#2a2a2a] text-[#d4af37] py-4 font-bold tracking-[0.2em] uppercase hover:bg-[#3a3a3a] transition-all shadow-lg active:scale-95">
+                Comprobar Múltiplo
+            </button>
+
+            <div id="resultadoCaja" class="mt-8 p-6 rounded-sm border border-stone-300 hidden animate-in fade-in duration-500 text-center">
+                <p id="mensajeResultado" class="text-lg italic text-stone-800"></p>
+            </div>
+        </div>
+
+        <div class="bg-[#2a2a2a] p-4 text-center">
+            <p class="text-[#d4af37]/40 text-[9px] tracking-widest uppercase">Precisión en cada plato</p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

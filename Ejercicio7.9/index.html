@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatoria de Array - Ejercicio 7.9</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700;900&display=swap');
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 text-white">
+
+    <div class="w-full max-w-md bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-[3rem] shadow-2xl">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl font-bold tracking-tighter italic">Array_Calculator</h1>
+            <p class="text-indigo-300 text-xs uppercase tracking-[0.4em] mt-2">Ejercicio 7.9</p>
+        </header>
+
+        <div class="space-y-6">
+            <div>
+                <label class="block text-[10px] font-bold text-indigo-300 uppercase mb-2 ml-1">Números separados por comas</label>
+                <input type="text" id="inputNumeros" placeholder="Ej: 1, 4, 7, 10, 15" 
+                    class="w-full bg-black/20 border border-white/10 p-5 rounded-2xl text-white text-lg outline-none focus:border-indigo-400 transition-all placeholder:text-white/20">
+            </div>
+
+            <button id="btnProcesar" 
+                class="w-full bg-white text-indigo-900 font-black py-5 rounded-2xl transition-all hover:bg-indigo-100 active:scale-95 uppercase tracking-widest text-sm shadow-xl">
+                Calcular Sumas
+            </button>
+        </div>
+
+        <!-- Pantalla de Resultados -->
+        <div id="resultadoContenedor" class="hidden mt-10 grid grid-cols-2 gap-4">
+            <div class="bg-white/5 p-4 rounded-2xl border border-white/10 text-center">
+                <span class="text-emerald-400 text-[10px] font-bold uppercase tracking-widest">Suma Pares</span>
+                <div id="sumaPares" class="text-3xl font-bold mt-2">0</div>
+            </div>
+            <div class="bg-white/5 p-4 rounded-2xl border border-white/10 text-center">
+                <span class="text-amber-400 text-[10px] font-bold uppercase tracking-widest">Suma Impares</span>
+                <div id="sumaImpares" class="text-3xl font-bold mt-2">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

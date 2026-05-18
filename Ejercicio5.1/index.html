@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Calendario Pro</title>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center font-[Inter]">
+    <div class="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 max-w-sm w-full text-center">
+        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">📅</div>
+        <h1 class="text-2xl font-bold text-slate-800 mb-2">Buscador de Meses</h1>
+        <p class="text-slate-500 text-sm mb-8">Introduce un número del 1 al 12</p>
+        
+        <input type="number" id="input-mes" min="1" max="12" class="w-full text-center text-2xl font-bold border-2 border-slate-200 rounded-2xl py-3 focus:border-blue-500 focus:outline-none transition-all mb-6" placeholder="0">
+        
+        <button onclick="buscarMes()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-200 transition-all active:scale-95">Consultar Mes</button>
+        
+        <div id="resultado" class="mt-8 p-4 rounded-2xl bg-slate-50 text-slate-700 font-medium hidden animate-bounce"></div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

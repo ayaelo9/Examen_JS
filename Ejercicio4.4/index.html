@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="icon-icons.png" type="image/x-icon">
+    <title>Convertidor de Números</title>
+</head>
+<body class="bg-orange-50 min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-white rounded-[2.5rem] shadow-2xl shadow-orange-200 overflow-hidden border border-orange-100">
+        <!-- Cabecera -->
+        <div class="bg-gradient-to-r from-orange-500 to-amber-400 p-8 text-white text-center">
+            <div class="inline-block bg-white/20 p-3 rounded-2xl mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-black uppercase tracking-wider">Traductor Numérico</h2>
+            <p class="text-orange-100 text-xs mt-1 italic">Del 0 al 10 en letras</p>
+        </div>
+
+        <!-- Contenido -->
+        <div class="p-10">
+            <div class="relative mb-8">
+                <input type="number" id="numeroInput" placeholder="Introduce un número (0-10)" 
+                    class="w-full pb-2 text-4xl font-bold text-center text-orange-600 border-b-4 border-orange-100 focus:border-orange-500 outline-none transition-colors placeholder:text-gray-200 placeholder:text-lg">
+            </div>
+
+            <button onclick="convertir()" 
+                class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-2xl shadow-lg shadow-orange-200 transition-all active:scale-95 text-lg">
+                CONVERTIR A TEXTO
+            </button>
+
+            <!-- Resultado -->
+            <div id="pantallaResultado" class="mt-10 opacity-0 transform translate-y-4 transition-all duration-500">
+                <p class="text-gray-400 text-xs font-bold uppercase tracking-[0.3em] mb-2 text-center">Resultado</p>
+                <div class="bg-orange-50 rounded-3xl p-6 text-center border-2 border-dashed border-orange-200">
+                    <span id="resultadoTexto" class="text-3xl font-serif italic text-orange-800">...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Promedio de Notas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4 font-sans">
+
+    <div class="max-w-md w-full bg-white p-8 rounded-3xl shadow-xl shadow-blue-100 border border-slate-100 transform transition-all hover:scale-[1.01]">
+        
+        <div class="text-center mb-8">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-inner">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-extrabold text-blue-950 uppercase tracking-tighter">
+                Calculadora de Notas
+            </h2>
+            <p class="text-slate-500 mt-1 font-medium">Introduce las 3 calificaciones para obtener la media</p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <label class="font-semibold text-sm text-slate-600 mb-1.5 block" for="nota1">Nota 1</label>
+                    <input class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-lg font-bold text-blue-900 transition-all placeholder:text-slate-300" id="nota1" type="number" step="0.1" placeholder="0.0">
+                </div>
+                <div>
+                    <label class="font-semibold text-sm text-slate-600 mb-1.5 block" for="nota2">Nota 2</label>
+                    <input class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-lg font-bold text-blue-900 transition-all placeholder:text-slate-300" id="nota2" type="number" step="0.1" placeholder="0.0">
+                </div>
+                <div>
+                    <label class="font-semibold text-sm text-slate-600 mb-1.5 block" for="nota3">Nota 3</label>
+                    <input class="w-full border-2 border-slate-200 rounded-xl px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-lg font-bold text-blue-900 transition-all placeholder:text-slate-300" id="nota3" type="number" step="0.1" placeholder="0.0">
+                </div>
+            </div>
+
+            <button onclick="calcularPromedio()" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-md shadow-blue-200 active:scale-95 text-lg flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Calcular Media
+            </button>
+
+            <div id="contenedor-resultado" class="bg-sky-50 p-6 rounded-2xl border-2 border-sky-100 mt-6 space-y-2 text-center opacity-0 transition-opacity duration-500">
+                <p class="text-sm text-sky-700 font-semibold uppercase tracking-wider">Tu promedio final es:</p>
+                <p id="promedio-texto" class="text-6xl font-black text-blue-900 tracking-tighter">0.00</p>
+                <p id="mensaje-estado" class="text-sky-800 font-medium pt-1"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

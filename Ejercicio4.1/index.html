@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Comparador de Números</title>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center">
+        <h2 class="text-cyan-400 text-2xl font-bold mb-6">¿Cuál es mayor?</h2>
+        
+        <div class="space-y-4">
+            <input id="num1" type="number" placeholder="Primer número" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white outline-none focus:border-cyan-500">
+            <input id="num2" type="number" placeholder="Segundo número" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white outline-none focus:border-cyan-500">
+            
+            <button onclick="comparar()" class="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg shadow-cyan-900/50">
+                Comparar ahora
+            </button>
+        </div>
+
+        <div id="resultado" class="mt-8 text-xl font-medium text-slate-300 min-h-[40px]"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Galletitas de la Suerte</title>
+</head>
+
+<body class="bg-orange-100 min-h-screen flex items-center justify-center p-4">
+
+<div class="bg-white w-full max-w-md sm:max-w-lg p-6 sm:p-10 rounded-3xl shadow-2xl text-center">
+
+<h1 class="text-2xl sm:text-4xl font-bold mb-6">
+🥠 Galletita de la Suerte
+</h1>
+
+<img
+id="galleta"
+src="galletas1.png"
+class="w-40 sm:w-52 mx-auto mb-6 rounded-xl transition-all duration-300"
+>
+
+<button
+id="boton-mensaje"
+onclick="mostrarMensaje()"
+class="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition w-full sm:w-auto">
+
+Abrir galletita
+
+</button>
+
+<button
+id="boton-reiniciar"
+onclick="reiniciar()"
+class="mt-4 bg-gray-700 text-white px-6 py-3 rounded-full hover:scale-105 transition w-full sm:w-auto">
+
+Volver a jugar
+
+</button>
+
+<p
+id="mensaje"
+class="mt-6 text-lg sm:text-xl font-bold text-gray-700">
+</p>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

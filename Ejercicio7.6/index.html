@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.tailwindcss.com"></script>
+<title>Carrusel</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+<div class="w-full flex justify-center">
+
+    <div class="bg-black text-white rounded-[3rem] overflow-hidden shadow-2xl w-[900px] flex">
+
+        <!-- Image -->
+        <div class="w-1/2">
+            <img id="foto-comida"
+            class="w-full h-full object-cover"
+            src=""
+            alt="">
+        </div>
+
+        <!-- Texte -->
+        <div class="w-1/2 p-10 flex flex-col justify-center">
+
+            <h1 id="nombre-plato"
+            class="text-4xl font-bold mb-2">
+            </h1>
+
+            <p id="desc-plato"
+            class="text-gray-400 mb-6">
+            </p>
+
+            <ul id="lista-caract"
+            class="space-y-2 mb-8">
+            </ul>
+
+            <div class="flex gap-4">
+
+                <button
+                onclick="cambiarSlide(-1)"
+                class="bg-gray-700 px-6 py-3 rounded-full hover:scale-105 transition">
+                ← Avant
+                </button>
+
+                <button
+                onclick="cambiarSlide(1)"
+                class="bg-white text-black px-6 py-3 rounded-full hover:scale-105 transition">
+                Cambiar →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js">
+</script>
+
+</body>
+</html>

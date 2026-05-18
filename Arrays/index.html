@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegador de Citas</title>
+    
+    <!-- Favicon con la imagen del dado de image_aa1179.png -->
+    <link rel="icon" type="image/png" href="Coffe_drink.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f3ece7] min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-xl w-full">
+        <!-- Tarjeta Principal con borde estilo café tostado -->
+        <div class="bg-[#fffcf9] rounded-[2.5rem] shadow-2xl overflow-hidden border-b-[12px] border-[#4b3621]">
+            
+            <!-- Encabezado Café Espresso -->
+            <div class="bg-[#3c2f25] px-10 py-8 text-left">
+                <h2 class="text-[#e6ccb2] text-3xl font-serif font-bold tracking-tight">
+                    2. Practicar arrays
+                </h2>
+                <div class="h-1 w-20 bg-[#7f5539] mt-2 rounded-full"></div>
+                <p class="text-[#ede0d4]/60 text-xs uppercase tracking-[0.2em] mt-3 font-medium">
+                    Explora nuestra colección de citas
+                </p>
+            </div>
+
+            <!-- Contenido del Visor -->
+            <div class="p-10">
+                <div class="flex flex-col items-center">
+                    
+                    <!-- Visor de Cita Estilo Café Latte -->
+                    <div class="w-full min-h-[220px] flex flex-col justify-center items-center bg-[#f7f0e9] rounded-[2rem] p-10 mb-10 border border-[#ddc8b4] shadow-inner text-center relative">
+                        <span class="absolute top-6 left-8 text-6xl text-[#ddc8b4] font-serif">“</span>
+                        
+                        <p id="textoCita" class="text-[#4b3621] text-2xl font-serif italic leading-relaxed z-10">
+                            Cargando tu dosis de inspiración...
+                        </p>
+                        
+                        <div class="w-12 h-[1px] bg-[#b08968] my-6"></div>
+                        
+                        <p id="autorCita" class="text-[#7f5539] text-sm font-bold uppercase tracking-widest">
+                            Autor
+                        </p>
+
+                        <span class="absolute top-6 left-8 text-6xl text-[#ddc8b4] font-serif">“</span>
+                    </div>
+
+                    <!-- Botones de Navegación -->
+                    <div class="flex items-center justify-between w-full gap-6">
+                        <!-- Botón Anterior (Café con Leche) -->
+                        <button onclick="disminuir()" 
+                                class="group flex-1 py-5 bg-[#e6ccb2] hover:bg-[#ddb892] text-[#4b3621] rounded-2xl transition-all duration-300 active:scale-95 border border-[#b08968] flex flex-col items-center">
+                            <span class="font-bold text-lg">Disminuir</span>
+                            <span class="text-[10px] uppercase tracking-tighter opacity-60">Cita anterior</span>
+                        </button>
+
+                        <!-- Botón Siguiente (Café Moka) -->
+                        <button onclick="aumentar()" 
+                                class="group flex-1 py-5 bg-[#7f5539] hover:bg-[#582f0e] text-[#ede0d4] rounded-2xl transition-all duration-300 active:scale-95 shadow-xl flex flex-col items-center">
+                            <span class="font-bold text-lg">Aumentar</span>
+                            <span class="text-[10px] uppercase tracking-tighter opacity-70">Cita siguiente</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer decorativo -->
+        <div class="text-center mt-10">
+            <p class="text-[#7f5539] text-sm font-medium opacity-80 italic">
+                “La vida es como una taza de café, todo está en cómo la preparas.”
+            </p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

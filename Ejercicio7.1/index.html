@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicio 7.1 - Suma entre dos números</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, #1e293b 0%, #0f172a 35%, #020617 100%);
+    }
+
+    .glass{
+      backdrop-filter: blur(18px);
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        0 10px 40px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .glow{
+      box-shadow:
+        0 0 15px rgba(59,130,246,.5),
+        0 0 40px rgba(59,130,246,.25);
+    }
+
+    .animate-float{
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform: translateY(0px);}
+      50%{transform: translateY(-6px);}
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-700/20 blur-3xl rounded-full"></div>
+
+  <div class="glass relative w-full max-w-3xl rounded-3xl overflow-hidden animate-float">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 p-6">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-3xl">
+          ∑
+        </div>
+
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold text-white">
+            Ejercicio 7.1
+          </h1>
+
+          <p class="text-cyan-100 mt-1">
+            Suma de valores comprendidos entre dos números
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="p-8 text-slate-200">
+
+      <div class="bg-slate-900/40 border border-slate-700 rounded-2xl p-5 mb-8">
+        <p class="leading-relaxed text-slate-300">
+          Introduce dos números enteros y el sistema calculará automáticamente
+          la suma de todos los valores comprendidos entre ellos, incluidos.
+        </p>
+
+      </div>
+
+      <!-- Inputs -->
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div>
+          <label class="block mb-2 text-sm font-semibold text-cyan-300">
+            Primer número
+          </label>
+
+          <input
+            id="num1"
+            type="number"
+            placeholder="Ej: 4"
+            class="w-full bg-slate-900/50 border border-slate-700 focus:border-cyan-400 outline-none rounded-2xl px-5 py-4 text-white text-lg transition"
+          />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-sm font-semibold text-cyan-300">
+            Segundo número
+          </label>
+
+          <input
+            id="num2"
+            type="number"
+            placeholder="Ej: 6"
+            class="w-full bg-slate-900/50 border border-slate-700 focus:border-cyan-400 outline-none rounded-2xl px-5 py-4 text-white text-lg transition"
+          />
+        </div>
+
+      </div>
+
+      <!-- Botón -->
+      <div class="mt-8">
+        <button
+          onclick="calcularSuma()"
+          class="glow w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-white font-bold py-4 rounded-2xl text-lg"
+        >
+          Calcular suma
+        </button>
+      </div>
+
+      <!-- Resultado -->
+      <div
+        id="resultado"
+        class="hidden mt-8 bg-slate-900/60 border border-cyan-500/30 rounded-3xl p-6"
+      >
+        <h2 class="text-xl font-bold text-cyan-300 mb-4">
+          Resultado
+        </h2>
+
+        <div class="space-y-3">
+          <p class="text-slate-300">
+            Operación:
+          </p>
+
+          <div
+            id="operacion"
+            class="text-lg font-semibold text-white break-words"
+          ></div>
+
+          <div class="h-px bg-slate-700 my-4"></div>
+
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">Suma total</span>
+
+            <span
+              id="total"
+              class="text-3xl font-extrabold text-cyan-400"
+            ></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div
+        id="error"
+        class="hidden mt-6 bg-red-500/10 border border-red-500/30 text-red-300 rounded-2xl p-4"
+      ></div>
+
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>

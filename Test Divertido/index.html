@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./output.css">
+   <title>TEST DIVERTIDO</title>
+</head>
+<body class="bg-slate-50 p-6 md:p-10 font-sans text-slate-800">
+
+   <div class="max-w-4xl mx-auto">
+      <h1 class="text-violet-700 font-black text-3xl mb-8 uppercase tracking-tight border-b-4 border-violet-200 pb-2">
+         TEST DIVERTIDO
+      </h1>
+
+      <div class="mb-10">
+         <p class="text-lg font-bold text-violet-900 mb-4">1. Ordena estos destinos según tu preferencia para viajar (1 al 5):</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Florida-value">Florida:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Florida-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Roma-value">Roma:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Roma-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="London-value">London:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="London-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Marrakech-value">Marrakech:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Marrakech-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Dubai-value">Dubai:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Dubai-value" type="number" min="1" max="5">
+            </div>
+         </div>
+      </div>
+
+      <div class="mb-10">
+         <p class="text-lg font-bold text-violet-900 mb-4">2. Escribe una palabra que describa lo siguiente:</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Paella-value">Paella:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Paella-value" type="text" placeholder="Tu descripción...">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Hamburguesa-value">Hamburguesa:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Hamburguesa-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Espaguetis-value">Espaguetis:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Espaguetis-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="cafe-value">Café:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="cafe-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Crema-Catalana-value">Crema Catalana:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" 
+               id="Crema-Catalana-value" 
+               type="text">
+         </div>
+      </div>
+
+      <div class="mb-10">
+         <p class="text-lg font-bold text-violet-900 mb-4">3. Indica alguien importante para tí:</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-blue-600" for="Lluvia-value">Lluvia:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Lluvia-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-orange-500" for="Sol-value">Sol:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Sol-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-slate-400" for="Aire-value">Aire:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Aire-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-red-600" for="Fuego-value">Fuego:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Fuego-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-green-600" for="Bosque-value">Bosque:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Bosque-value" type="text">
+            </div>
+         </div>
+      </div>
+
+      <button 
+         onclick="calcular()" 
+         class="bg-violet-700 text-white px-10 py-3 rounded-full font-bold text-lg hover:bg-violet-800 transition-all shadow-lg hover:shadow-violet-200 cursor-pointer"
+      >
+         Ver Resultados
+      </button>
+      <p id =resultat class=""></p>
+   </div>
+    <script src="./script.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./output.css">
+   <title>TEST DIVERTIDO</title>
+</head>
+<body class="bg-slate-50 p-6 md:p-10 font-sans text-slate-800">
+
+   <div class="max-w-4xl mx-auto">
+      <h1 class="text-violet-700 font-black text-3xl mb-8 uppercase tracking-tight border-b-4 border-violet-200 pb-2">
+         TEST DIVERTIDO
+      </h1>
+
+      <div class="mb-10">
+         <p id="Pregunta1" class="text-lg font-bold text-violet-900 mb-4">1. Ordena estos destinos según tu preferencia para viajar (1 al 5):</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Florida-value">Florida:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Florida-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Roma-value">Roma:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Roma-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="London-value">London:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="London-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Marrakech-value">Marrakech:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Marrakech-value" type="number" min="1" max="5">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Dubai-value">Dubai:</label>
+               <input class="w-20 border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 font-bold" id="Dubai-value" type="number" min="1" max="5">
+            </div>
+         </div>
+      </div>
+
+      <div class="mb-10">
+         <p id="Pregunta2" class="text-lg font-bold text-violet-900 mb-4">2. Escribe una palabra que describa lo siguiente:</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Paella-value">Paella:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Paella-value" type="text" placeholder="Tu descripción...">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Hamburguesa-value">Hamburguesa:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Hamburguesa-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Espaguetis-value">Espaguetis:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="Espaguetis-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="cafe-value">Café:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" id="cafe-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium" for="Crema-Catalana-value">Crema Catalana:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700 italic" 
+               id="Crema-Catalana-value" 
+               type="text">
+         </div>
+      </div>
+
+      <div class="mb-10">
+         <p id="Pregunta3" class="text-lg font-bold text-violet-900 mb-4">3. Indica alguien importante para tí:</p>
+         <div class="space-y-3 pl-8">
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-blue-600" for="Lluvia-value">Lluvia:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Lluvia-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-orange-500" for="Sol-value">Sol:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Sol-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-slate-400" for="Aire-value">Aire:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Aire-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-red-600" for="Fuego-value">Fuego:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Fuego-value" type="text">
+            </div>
+            <div class="flex items-center gap-4">
+               <label class="w-24 font-medium text-green-600" for="Bosque-value">Bosque:</label>
+               <input class="flex-1 max-w-md border-2 border-violet-200 rounded px-3 py-1 focus:border-violet-500 outline-none text-violet-700" id="Bosque-value" type="text">
+            </div>
+         </div>
+      </div>
+
+      <button 
+         onclick="calcular()" 
+         class="bg-violet-700 text-white px-10 py-3 rounded-full font-bold text-lg hover:bg-violet-800 transition-all shadow-lg hover:shadow-violet-200 cursor-pointer"
+      >
+         Ver Resultados
+      </button>
+      <p id =resultat class=""></p>
+   </div>
+    <script src="./script.js"></script>
+</body>
+</html>

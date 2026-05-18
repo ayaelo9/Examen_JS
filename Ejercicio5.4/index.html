@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Gestor de Tareas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 flex items-center justify-center p-6">
+
+  <!-- CONTENEDOR -->
+  <div class="w-full max-w-5xl bg-white/10 backdrop-blur-xl border border-white/10 rounded-[35px] p-8 md:p-12 shadow-2xl">
+
+    <!-- ENCABEZADO -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-12">
+
+      <div>
+
+        <p class="uppercase tracking-[0.4em] text-cyan-400 text-xs mb-3 font-semibold">
+          Organizador Personal
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-black text-white leading-none">
+          GESTOR
+          <span class="text-cyan-400">
+            DE TAREAS
+          </span>
+        </h1>
+
+        <p class="text-slate-400 mt-4 text-lg">
+          Administra tus tareas fácilmente
+        </p>
+
+      </div>
+
+      <!-- CONTADOR -->
+      <div class="bg-black/20 border border-white/10 rounded-3xl px-10 py-6 text-center">
+
+        <p class="uppercase tracking-[0.3em] text-slate-400 text-xs">
+          Pendientes
+        </p>
+
+        <h2 id="contador" class="text-5xl font-black text-white mt-2">
+          0
+        </h2>
+
+      </div>
+
+    </div>
+
+    <!-- AÑADIR TAREA -->
+    <div class="flex flex-col md:flex-row gap-5 mb-8">
+
+      <input
+        type="text"
+        id="tarea-input"
+        placeholder="Escribe una nueva tarea..."
+        class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white text-lg outline-none focus:border-cyan-400 placeholder:text-slate-500"
+      >
+
+      <button
+        id="btn-add"
+        onclick="añadirTarea()"
+        class="bg-cyan-400 hover:bg-cyan-300 transition-all duration-300 text-slate-900 font-bold px-8 py-5 rounded-2xl shadow-lg shadow-cyan-500/20"
+      >
+        Añadir tarea
+      </button>
+
+    </div>
+
+    <!-- ELIMINAR TAREA -->
+    <div class="flex flex-col md:flex-row gap-5 mb-10">
+
+      <input
+        type="number"
+        id="input-eliminar"
+        placeholder="Número de tarea"
+        class="flex-1 bg-white/5 border border-red-400/20 rounded-2xl px-6 py-5 text-white text-lg outline-none focus:border-red-400 placeholder:text-slate-500"
+      >
+
+      <button
+        id="btn-delete"
+        onclick="eliminarTarea()"
+        class="bg-red-500/20 hover:bg-red-500/30 transition-all duration-300 border border-red-400/20 text-red-300 px-8 py-5 rounded-2xl font-semibold"
+      >
+        Eliminar tarea
+      </button>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+
+      <button
+        id="btn-show"
+        onclick="mostrarTareas()"
+        class="bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10 text-white py-4 rounded-2xl font-semibold"
+      >
+        Mostrar tareas
+      </button>
+
+      <button
+        id="btn-salir"
+        onclick="salirAplicacion()"
+        class="bg-purple-500/20 hover:bg-purple-500/30 transition-all duration-300 border border-purple-400/20 text-purple-300 py-4 rounded-2xl font-semibold"
+      >
+        Salir de la aplicación
+      </button>
+
+    </div>
+
+    <!-- LISTA -->
+    <div
+      id="lista-tareas"
+      class="space-y-4 max-h-[350px] overflow-y-auto pr-2"
+    >
+
+      <div class="text-center py-20 text-slate-500 text-lg">
+        No hay tareas todavía
+      </div>
+
+    </div>
+
+    <!-- MENSAJE FINAL -->
+    <div
+      id="mensaje-final"
+      class="hidden text-center py-16"
+    >
+
+      <h2 class="text-6xl md:text-8xl font-black text-white mb-5">
+        Gracias
+      </h2>
+
+      <p class="text-slate-400 text-xl">
+        La aplicación ha sido cerrada correctamente.
+      </p>
+
+    </div>
+
+  </div>
+
+  <script src="js/app.js">
+
+  
+  </script>
+
+</body>
+</html>

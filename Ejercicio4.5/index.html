@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="Restaurante.png" type="image/x-icon">
+    <title>Calculadora de Mesa</title>
+</head>
+<body class="bg-[#1a1a1a] min-h-screen flex items-center justify-center p-6 font-serif">
+
+    <div class="max-w-md w-full bg-[#f4f1ea] rounded-sm shadow-[0_0_80px_rgba(0,0,0,0.5)] border-[16px] border-[#2a2a2a] overflow-hidden relative">
+        
+        <div class="absolute top-0 right-0 w-20 h-20 bg-[#d4af37] opacity-10 rotate-45 translate-x-10 -translate-y-10"></div>
+
+        <div class="p-10 text-center border-b border-stone-300">
+            <h1 class="text-[#2a2a2a] text-3xl font-bold tracking-tighter uppercase mb-1">La Pequeña Cocina</h1>
+            <div class="flex items-center justify-center gap-3 text-[#d4af37]">
+                <span class="h-[1px] w-8 bg-[#d4af37]"></span>
+                <span class="text-[10px] tracking-[0.3em] uppercase">Gestión de Cuentas</span>
+                <span class="h-[1px] w-8 bg-[#d4af37]"></span>
+            </div>
+        </div>
+
+        <div class="p-10 space-y-8">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="border-b-2 border-stone-300 focus-within:border-[#d4af37] transition-colors">
+                    <label class="block text-[10px] text-stone-400 uppercase font-bold mb-1">Primer Valor</label>
+                    <input type="number" id="n1" placeholder="0" 
+                        class="w-full bg-transparent p-2 text-2xl text-stone-800 outline-none font-mono">
+                </div>
+                <div class="border-b-2 border-stone-300 focus-within:border-[#d4af37] transition-colors">
+                    <label class="block text-[10px] text-stone-400 uppercase font-bold mb-1">Segundo Valor</label>
+                    <input type="number" id="n2" placeholder="0" 
+                        class="w-full bg-transparent p-2 text-2xl text-stone-800 outline-none font-mono">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-center text-sm italic text-stone-600 mb-3">Seleccione la operación a realizar:</label>
+                <select id="operador" 
+                    class="w-full bg-stone-100/50 border border-stone-200 p-4 rounded-sm text-stone-800 font-medium outline-none focus:border-[#d4af37] cursor-pointer appearance-none text-center italic">
+                    <option value="suma">Sumar conceptos</option>
+                    <option value="resta">Restar descuento</option>
+                    <option value="multi">Multiplicar raciones</option>
+                    <option value="divi">Dividir entre comensales</option>
+                </select>
+            </div>
+
+            <button onclick="calcular()" 
+                class="w-full bg-[#2a2a2a] text-[#d4af37] py-4 font-bold tracking-[0.2em] uppercase hover:bg-[#3a3a3a] transition-all shadow-lg active:scale-95">
+                Calcular Cuenta
+            </button>
+
+            <div id="ticket" class="mt-8 border-t-2 border-dashed border-stone-300 pt-6 hidden animate-in fade-in duration-300">
+                <div class="text-center">
+                    <p class="text-[10px] text-stone-400 uppercase tracking-widest mb-2">Total de la nota</p>
+                    <div id="resultadoDisplay" class="text-5xl font-bold text-[#2a2a2a] font-mono tracking-tighter">
+                        0.00
+                    </div>
+                    <div class="h-[1px] w-16 bg-[#d4af37] mx-auto mt-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#2a2a2a] p-4 text-center">
+            <p class="text-[#d4af37]/40 text-[9px] tracking-widest uppercase">Gastronomía y Matemáticas</p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

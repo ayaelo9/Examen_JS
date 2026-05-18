@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .animacion{
+      animation: aparecer .5s ease;
+    }
+
+    @keyframes aparecer{
+      from{
+        opacity:0;
+        transform: translateY(15px);
+      }
+
+      to{
+        opacity:1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900 flex items-center justify-center p-4">
+
+  <div class="w-full max-w-3xl">
+
+    <div class="glass border border-white/10 rounded-[30px] overflow-hidden shadow-2xl">
+
+      <div class="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 p-6 md:p-8">
+
+        <div class="flex items-center justify-between gap-4">
+
+            <h1 class="text-3xl md:text-5xl font-bold text-white mt-2">
+              Factorial de un número
+            </h1>
+
+            <p class="text-white/80 mt-4 text-sm md:text-base">
+              Introduce un número y el programa calculará automáticamente su factorial.
+            </p>
+          </div>
+
+          <div class="hidden md:flex w-24 h-24 rounded-full bg-white/10 border border-white/20 items-center justify-center text-5xl">
+            🧠
+          </div>
+
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+
+        <div class="flex flex-col md:flex-row gap-4">
+
+          <input
+            type="number"
+            id="numero"
+            placeholder="Escribe un número..."
+            class="flex-1 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/40 outline-none focus:border-cyan-400 transition"
+          >
+
+          <button
+            onclick="calcularFactorial()"
+            class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-[1.03] active:scale-95 transition-all duration-300 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl"
+          >
+            Calcular
+          </button>
+
+        </div>
+
+        <div
+          id="resultado"
+          class="mt-8 hidden"
+        >
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/apps.js"></script>
+
+</body>
+</html>
