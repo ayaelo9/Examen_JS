@@ -54,29 +54,62 @@ const datos = [
         caracteristicas: ["Pollo marinado", "Salsa de especias", "Crema de coco"] 
     },
     { 
-    nombre: "Couscous Real", 
-    descripcion: "Marruecos", 
-    imagen: "https://img.cuisineaz.com/660x495/2022/02/23/i183013-couscous-marocain.jpeg", 
-    caracteristicas: ["Sémola de trigo", "Siete verduras", "Cordero o pollo"] 
+        nombre: "Couscous Real", 
+        descripcion: "Marruecos", 
+        imagen: "https://img.cuisineaz.com/660x495/2022/02/23/i183013-couscous-marocain.jpeg", 
+        caracteristicas: ["Sémola de trigo", "Siete verduras", "Cordero o pollo"] 
     }
 ];
 
 let index = 0;
+let autoplay = false;
+let interval;
 
 function render() {
+
     const actual = datos[index];
+
     document.getElementById('foto-comida').src = actual.imagen;
     document.getElementById('nombre-plato').innerText = actual.nombre;
     document.getElementById('desc-plato').innerText = actual.descripcion;
-    
+
     const lista = document.getElementById('lista-caract');
-    lista.innerHTML = actual.caracteristicas.map(c => `<li>• ${c}</li>`).join('');
+
+    lista.innerHTML = actual.caracteristicas
+        .map(c => `<li>• ${c}</li>`)
+        .join('');
 }
 
 function cambiarSlide(dir) {
+
     index = (index + dir + datos.length) % datos.length;
+
     render();
 }
+
+document.getElementById('autoPlay').addEventListener('click', () => {
+
+    autoplay = !autoplay;
+
+    const btn = document.getElementById('autoPlay');
+
+    if (autoplay) {
+
+        btn.innerText = "⏸ Pause";
+
+        interval = setInterval(() => {
+
+            cambiarSlide(1);
+
+        }, 3000);
+
+    } else {
+
+        btn.innerText = "▶ Auto";
+
+        clearInterval(interval);
+    }
+});
 
 // Ejecutar render al cargar
 window.onload = render;
