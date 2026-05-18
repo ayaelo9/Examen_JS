@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fibonacci</title>
 </head>
-<body class="bg-slate-950 min-h-screen flex items-center justify-center p-4">
-  <a href="../index.html" style="position:fixed; bottom:20px; right:20px; background:#007ecc; color:white; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; border-radius:50%; font-size:24px; z-index:9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white;">🏠</a>
+<body class="bg-slate-50 min-h-screen flex flex-col items-center justify-start md:justify-center p-4 md:p-6 text-slate-800 font-sans">
+    
+    <a href="../index.html" style="position:fixed; bottom:20px; right:20px; background:#007ecc; color:white; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; border-radius:50%; font-size:24px; z-index:9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white;">🏠</a>
 
-    <div class="bg-slate-900 border border-slate-800 p-8 rounded-[2.5rem] w-full max-w-md shadow-2xl">
-        <h2 class="text-emerald-500 font-black text-2xl mb-2 italic">FIBONACCI 7.5</h2>
-        <p class="text-slate-500 text-xs uppercase font-bold mb-6">Generador de secuencia por array</p>
+    <div class="w-full max-w-md bg-white border border-slate-200 p-6 md:p-8 rounded-[2rem] shadow-xl my-auto transition-all">
+        
+        <div class="mb-6 text-center md:text-left">
+            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-wider">Bloque IV: Bucles</span>
+            <h2 class="text-slate-900 font-extrabold text-3xl mt-2 tracking-tight">FIBONACCI 7.5</h2>
+            <p class="text-slate-500 text-xs uppercase font-semibold mt-1 tracking-wide">Generador de secuencia por array</p>
+        </div>
 
         <div class="space-y-4">
-            <input type="number" id="inputUser" placeholder="Introduce un número (ej. 10)" 
-                class="w-full bg-slate-950 border border-slate-800 p-4 rounded-2xl text-emerald-400 outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all">
+            <div class="flex flex-col gap-1.5">
+                <label for="inputUser" class="text-xs font-bold text-slate-600 pl-1">Elementos a generar:</label>
+                <input type="number" id="inputUser" placeholder="Introduce un número (ej. 10)" 
+                    class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl text-slate-900 font-medium text-base outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 transition-all placeholder:text-slate-400">
+            </div>
 
             <button onclick="calcularFibonacci()" 
-                class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 rounded-2xl transition-transform active:scale-95">
-                GENERAR SECUENCIA
+                class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-md shadow-emerald-600/10 active:scale-[0.98] uppercase text-xs tracking-widest">
+                ⚡ GENERAR SECUENCIA
             </button>
         </div>
 
-        <!-- El resultado aparecerá aquí -->
-        <div id="resultadoContenedor" class="hidden mt-8 p-6 bg-emerald-500/5 border border-emerald-500/20 rounded-3xl">
-            <p id="textoFibonacci" class="text-emerald-400 font-mono text-lg text-center break-words leading-relaxed"></p>
+        <div id="resultadoContenedor" class="hidden mt-6 p-5 bg-emerald-50/60 border border-emerald-100 rounded-2xl animate-fade-in">
+            <p class="text-[10px] font-black text-emerald-800 uppercase tracking-wider mb-2 text-center">Secuencia Resultante</p>
+            <p id="textoFibonacci" class="text-emerald-700 font-mono text-base text-center break-words leading-relaxed font-semibold bg-white p-3 rounded-lg border border-emerald-100/50 shadow-sm"></p>
         </div>
     </div>
 
     <script src="js/app.js"></script>
 </body>
-</html>
+</html>>

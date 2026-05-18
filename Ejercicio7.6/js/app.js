@@ -1,30 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
 
-    const boton = document.getElementById('btnGenerar');
-    const input = document.getElementById('inputNumero');
+function invertirTexto() {
+    const textoOriginal = document.getElementById('inputTexto').value;
+    
+    if (textoOriginal.trim() === "") {
+        alert("Por favor, introduce algún texto para poder invertirlo.");
+        return;
+    }
+
+    let textoAlReves = "";
+
+   
+    for (let i = textoOriginal.length - 1; i >= 0; i--) {
+        textoAlReves += textoOriginal[i]; 
+    }
+
     const contenedor = document.getElementById('resultadoContenedor');
-    const display = document.getElementById('textoResultado');
-
-    boton.addEventListener('click', () => {
-
-        const numero = Number(input.value);
-
-        // Validación
-        if (!Number.isInteger(numero) || numero < 0) {
-            alert("Introduce un número válido (0 o mayor).");
-            return;
-        }
-
-        let secuencia = [];
-
-        // Cuenta regresiva
-        for (let i = numero; i >= 0; i--) {
-            secuencia.push(i);
-        }
-
-        // Mostrar resultado
-        display.textContent = secuencia.join(".");
-        contenedor.classList.remove('hidden');
-    });
-
-});
+    const display = document.getElementById('textoInvertido');
+    
+    display.innerText = textoAlReves;
+    contenedor.classList.remove('hidden');
+}

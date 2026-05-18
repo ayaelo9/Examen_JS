@@ -2,18 +2,17 @@
 let clasificaciones = ["Ana", "Oswaldo", "Raúl", "Celia", "María", "Antonio"];
 
 /**
- * Genera el HTML para las tarjetas de clasificación
+ * Genera el HTML para las tarjetas de clasificación (ADAPTADO A MODO CLARO)
  */
 function generarHTML(lista, esActual = false) {
     return lista.map((nombre, i) => `
-        <div class="flex items-center justify-between ${esActual ? 'bg-indigo-500/10 border-indigo-500/20' : 'bg-slate-800/40 border-white/5'} p-3 rounded-xl border animate-in fade-in slide-in-from-bottom-1">
+        <div class="flex items-center justify-between ${esActual ? 'bg-blue-50 border-blue-200' : 'bg-slate-50 border-slate-200'} p-3 rounded-xl border animate-in fade-in slide-in-from-bottom-1">
             <div class="flex items-center gap-3">
-                <span class="w-5 h-5 flex items-center justify-center ${esActual ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-400'} rounded-full text-[9px] font-bold">
+                <span class="w-5 h-5 flex items-center justify-center ${esActual ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-700'} rounded-full text-[9px] font-black">
                     ${i + 1}
                 </span>
-                <span class="font-semibold text-xs ${esActual ? 'text-white' : 'text-slate-400'}">${nombre}</span>
+                <span class="font-bold text-xs text-slate-800">${nombre}</span>
             </div>
-           
         </div>
     `).join('');
 }
