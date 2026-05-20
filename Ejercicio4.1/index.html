@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de Números</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
-    <a href="../index.html" style="position:fixed; bottom:20px; right:20px; background:#007ecc; color:white; width:50px; height:50px; display:flex; align-items:center; justify-content:center; text-decoration:none; border-radius:50%; font-size:24px; z-index:9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid white;">🏠</a>
+<body class="bg-slate-950 min-h-screen flex items-center justify-center p-4">
+
+    <a href="../index.html" class="fixed bottom-5 right-5 w-12 h-12 bg-slate-900 border border-slate-800 text-xl flex items-center justify-center rounded-xl shadow-lg hover:border-cyan-500/50 hover:bg-slate-800 text-white transition-all z-50">
+        🏠
+    </a>
     
-    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center">
+    <div class="bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-2xl shadow-2xl max-w-sm w-full text-center">
         <h2 class="text-cyan-400 text-2xl font-bold mb-6">¿Cuál es mayor?</h2>
         
         <div class="space-y-4">
-            <input id="num1" type="number" placeholder="Primer número" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white outline-none focus:border-cyan-500">
-            <input id="num2" type="number" placeholder="Segundo número" class="w-full p-3 bg-slate-800 border border-slate-700 rounded-xl text-white outline-none focus:border-cyan-500">
+            <input id="num1" type="number" placeholder="Primer número" class="w-full p-3 bg-slate-950 border border-slate-800 rounded-xl text-white outline-none focus:border-cyan-500/50 transition-colors">
+            <input id="num2" type="number" placeholder="Segundo número" class="w-full p-3 bg-slate-950 border border-slate-800 rounded-xl text-white outline-none focus:border-cyan-500/50 transition-colors">
             
-            <button onclick="comparar()" class="w-full py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg shadow-cyan-900/50">
+            <button onclick="comparar()" class="w-full py-3.5 bg-slate-800 hover:bg-cyan-500 text-slate-200 hover:text-slate-950 font-bold rounded-xl transition-all active:scale-98 border border-slate-700 hover:border-cyan-400 cursor-pointer">
                 Comparar ahora
             </button>
         </div>
 
-        <div id="resultado" class="mt-8 text-xl font-medium text-slate-300 min-h-[40px]"></div>
+        <div id="resultado" class="mt-8 text-lg font-medium text-slate-300 min-h-[40px]"></div>
     </div>
 
     <script src="js/script.js"></script>
